@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أبراج الغد</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c20 0%, #060410 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .btn {
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            font-size: 18px;
+            margin: 20px;
+            border-radius: 25px;
+            width: 80%;
+            max-width: 300px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: scale(1.05); }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .sign-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 15px 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .sign-btn:hover { background: rgba(255, 255, 255, 0.2); }
+
+        /* تصميم الرابط الإعلاني الجديد */
+        .ad-container {
+            text-decoration: none;
+            display: block;
+            margin-top: 25px;
+        }
+        .locked-section {
+            background: rgba(255, 69, 0, 0.1);
+            border: 2px dashed #ff4500;
+            padding: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .locked-section:hover {
+            background: rgba(255, 69, 0, 0.2);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+<div id="screen1">
+    <h2>✨ تطبيق أبراج الغد ✨</h2>
+    <p>اختر برجك الفلكي لمعرفة حظك اليوم:</p>
+    <div class="grid">
+        <div class="sign-btn" onclick="showDetails('الحمل')">♈<br>الحمل</div>
+        <div class="sign-btn" onclick="showDetails('الثور')">♉<br>الثور</div>
+        <div class="sign-btn" onclick="showDetails('الجوزاء')">♊<br>الجوزاء</div>
+        <div class="sign-btn" onclick="showDetails('السرطان')">♋<br>السرطان</div>
+        <div class="sign-btn" onclick="showDetails('الأسد')">♌<br>الأسد</div>
+        <div class="sign-btn" onclick="showDetails('العذراء')">♍<br>العذراء</div>
+        <div class="sign-btn" onclick="showDetails('الميزان')">♎<br>الميزان</div>
+        <div class="sign-btn" onclick="showDetails('العقرب')">♏<br>العقرب</div>
+        <div class="sign-btn" onclick="showDetails('القوس')">♐<br>القوس</div>
+        <div class="sign-btn" onclick="showDetails('الجدي')">♑<br>الجدي</div>
+        <div class="sign-btn" onclick="showDetails('الدلو')">♒<br>الدلو</div>
+        <div class="sign-btn" onclick="showDetails('الحوت')">♓<br>الحوت</div>
+    </div>
+</div>
+
+<div id="screen2" style="display:none;">
+    <h2 id="sign-title"></h2>
+    <div style="background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 15px; margin: 20px 0;">
+        <h3>🔮 توقعات اليوم العامة:</h3>
+        <p>لديك طاقة إيجابية عالية اليوم وفرص ممتازة في طريقها إليك.</p>
+    </div>
+
+    <a href="https://www.effectivecpmnetwork.com/xej795pk?key=17be7c01c9b7e939742ae11fc79c1ed3" 
+       target="_blank" 
+       class="ad-container">
+        <div class="locked-section">
+            <span style="font-size:30px;">🔓</span>
+            <p style="margin:10px 0 0 0; color: #ff4500; font-weight: bold; font-size: 18px;">
+                اضغط هنا لفتح التوافق العاطفي والحظ المالي مجاناً
+            </p>
+        </div>
+    </a>
+
+    <button class="btn" onclick="goBack()">العودة للرئيسية</button>
+</div>
+
+<script>
+    function showDetails(name) {
+        document.getElementById('screen1').style.display = 'none';
+        document.getElementById('screen2').style.display = 'block';
+        document.getElementById('sign-title').innerText = "برج " + name;
+    }
+
+    function goBack() {
+        document.getElementById('screen1').style.display = 'block';
+        document.getElementById('screen2').style.display = 'none';
+    }
+</script>
+</body>
+</html>
